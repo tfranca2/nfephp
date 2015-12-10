@@ -577,7 +577,7 @@ class ToolsNFe extends BaseTools
         $nodeqr->appendChild($dom->createCDATASection($qrcode));
         $signature = $dom->getElementsByTagName('Signature')->item(0);
         $nfe->insertBefore($infNFeSupl, $signature);
-        $dom->formatOutput = true;
+        $dom->formatOutput = false;
         $xmlSigned = $dom->saveXML();
         //salva novamente o xml assinado e agora com o QRCode
         if ($saveFile) {
